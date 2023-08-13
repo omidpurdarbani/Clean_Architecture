@@ -1,4 +1,4 @@
- using CleanArchitecture.Mvc.Data;
+using CleanArchitecture.Mvc.Data;
 using Data.Context;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
