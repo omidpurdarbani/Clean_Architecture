@@ -1,0 +1,17 @@
+﻿@model Application.ViewModels.CoursesViewModel
+@{
+    ViewData["Title"] = "دوره ها";
+}
+<div class="container body-content">
+    <div class="row course-content">
+        @foreach (var item in Model.Courses)
+        {
+            <div class="course-image-container">
+                <div class="course-image" style="background-image: url(/Images/@item.ImageUrl)"></div>
+            </div>
+            <div>@item.Name</div>
+            <div>@item.Description</div>
+                                  <hr/>
+        }
+    </div>
+</div>
