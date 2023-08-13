@@ -1,13 +1,22 @@
 using CleanArchitecture.Mvc.Data;
+using Data.Context;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-var connectionString = builder.Configuration.GetConnectionString("UniversityIdentityDBConnection");
+var identityConnectionString = builder.Configuration.GetConnectionString("UniversityIdentityDBConnection");
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(connectionString));
+    options.UseSqlServer(identityConnectionString));
+
+
+var dataConnectionString = builder.Configuration.GetConnectionString("UniversityDataDBConnection");
+
+builder.Services.AddDbContext<UniversityDbContext>(options =>
+    options.UseSqlServer(dataConnectionString));
+
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)

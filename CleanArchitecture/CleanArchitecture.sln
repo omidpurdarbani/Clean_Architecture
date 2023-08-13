@@ -15,7 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web.Mvc", "CleanArchitecture.Mvc\Web.Mvc.csproj", "{C159980C-A6EA-4FA3-8ADE-04FC3D15E14A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{5FAC24BF-BE8E-40C6-A008-BC25A424E82E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{5FAC24BF-BE8E-40C6-A008-BC25A424E82E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{ABA26779-9E37-4050-BD7B-2F7B8AEAA960}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{5FAC24BF-BE8E-40C6-A008-BC25A424E82E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FAC24BF-BE8E-40C6-A008-BC25A424E82E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FAC24BF-BE8E-40C6-A008-BC25A424E82E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABA26779-9E37-4050-BD7B-2F7B8AEAA960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABA26779-9E37-4050-BD7B-2F7B8AEAA960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABA26779-9E37-4050-BD7B-2F7B8AEAA960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABA26779-9E37-4050-BD7B-2F7B8AEAA960}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,6 +44,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{C159980C-A6EA-4FA3-8ADE-04FC3D15E14A} = {C3313D34-78E4-429B-8A69-952E1FBC39AB}
 		{5FAC24BF-BE8E-40C6-A008-BC25A424E82E} = {11D1E176-B372-4427-B025-860E55FB49A5}
+		{ABA26779-9E37-4050-BD7B-2F7B8AEAA960} = {0A2DDADB-1174-4606-8F8D-B12333064EF7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {47C29CA8-402D-4A9F-9EA5-297231EBFD79}
