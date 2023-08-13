@@ -4,13 +4,14 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Domain.Models;
 
 namespace Application.ViewModels
 {
     public class CoursesViewModel
     {
         [DisplayName("دوره ها")]
-        public IEnumerable<CourseViewModel> Courses { get; set; }
+        public IEnumerable<Course> Courses { get; set; }
     }
 
     public class CourseViewModel

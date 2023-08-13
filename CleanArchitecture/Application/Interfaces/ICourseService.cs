@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Application.ViewModels;
 
-namespace Application.Services
+namespace Application.Interfaces
 {
     public interface ICourseService
     {
