@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace CleanArchitecture.Mvc.Data
+namespace Web.Mvc.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {

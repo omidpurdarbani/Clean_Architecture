@@ -1,4 +1,4 @@
-using CleanArchitecture.Mvc.Data;
+using Web.Mvc.Data;
 using Data.Context;
 using IoC;
 using Microsoft.AspNetCore.Identity;

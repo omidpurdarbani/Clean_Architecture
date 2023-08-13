@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure.IoC", "Infra
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{C3313D34-78E4-429B-8A69-952E1FBC39AB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web.Mvc", "CleanArchitecture.Mvc\Web.Mvc.csproj", "{C159980C-A6EA-4FA3-8ADE-04FC3D15E14A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web.Mvc", "Presentation\Web.Mvc.csproj", "{C159980C-A6EA-4FA3-8ADE-04FC3D15E14A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{5FAC24BF-BE8E-40C6-A008-BC25A424E82E}"
 EndProject
