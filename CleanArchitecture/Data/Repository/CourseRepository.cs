@@ -18,9 +18,14 @@ namespace Data.Repository
             _context = context;
         }
 
-        public IEnumerable<Course> GetCourses()
+        public IEnumerable<Course?> GetCourses()
         {
             return _context.Courses;
+        }
+
+        public Course? GetCourseById(int id)
+        {
+            return _context.Courses.Find(id);
         }
     }
 }

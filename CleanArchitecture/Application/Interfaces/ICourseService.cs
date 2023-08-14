@@ -10,5 +10,6 @@ namespace Application.Interfaces
     public interface ICourseService
     {
         CoursesViewModel GetCourses();
+        CourseViewModel? GetCourse(int id);
     }
 }

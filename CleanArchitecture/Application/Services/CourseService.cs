@@ -25,5 +25,18 @@ namespace Application.Services
                 Courses = _courseRepository.GetCourses()
             };
         }
+
+        public CourseViewModel? GetCourse(int id)
+        {
+            var course = _courseRepository.GetCourseById(id);
+            return course != null
+                ? new CourseViewModel {
+                    Id = course.Id,
+                    Name = course.Name,
+                    Description = course.Description,
+                    ImageUrl = course.ImageUrl
+                }
+                : null;
+        }
     }
 }

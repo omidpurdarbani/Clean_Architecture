@@ -1,0 +1,17 @@
+﻿@model Application.ViewModels.CourseViewModel
+
+@{
+    ViewBag.Title = "دوره" + Model.Name;
+}
+
+<div class="container">
+    <div class="row course-content">
+        <div class="course-image-container">
+                <div class="course-image" style="background-image: url(/Images/@Model.ImageUrl)"></div>
+            </div>
+        <a>@Model.Name</a>
+        <div>@Model.Description</div>
+        <hr/>
+        <a asp-action="Index">بازگشت</a>
+    </div>
+</div>

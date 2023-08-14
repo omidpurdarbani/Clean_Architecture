@@ -16,5 +16,11 @@ namespace Web.Mvc.Controllers
         {
             return View(_courseService.GetCourses());
         }
+
+        public IActionResult Details(int id)
+        {
+            var model = _courseService.GetCourse(id);
+            return model != null ? View(model) : NotFound();
+        }
     }
 }
