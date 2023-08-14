@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Application.Interfaces;
+using Application.Security;
 using Application.ViewModels;
 using Domain.Interfaces;
 using Domain.Models;
@@ -36,6 +37,24 @@ namespace Application.Services
             _userRepository.AddUser(user);
             _userRepository.Save();
             return user.Id;
+        }
+
+        public bool IsExistUser(string email, string password)
+        {
+            bool userExist = _userRepository.IsExistEmail(email.Trim().ToLower());
+            if (userExist)
+            {
+                User user = _userRepository.GetUserByEmail(email);
+                bool checkUserPass = SecretHasher.Verify(password.Trim(), user.Password);
+                return checkUserPass;
+            }
+
+            return false;
+        }
+
+        public User GetUserByEmail(string email)
+        {
+            return _userRepository.GetUserByEmail(email.Trim().ToLower());
         }
     }
 }

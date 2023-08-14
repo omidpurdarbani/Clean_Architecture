@@ -13,5 +13,7 @@ namespace Application.Interfaces
         CheckUser CheckUserName(string username);
         CheckUser CheckEmail(string email);
         int RegisterUser(User user);
+        bool IsExistUser(string email,string password);
+        User GetUserByEmail(string email);
     }
 }

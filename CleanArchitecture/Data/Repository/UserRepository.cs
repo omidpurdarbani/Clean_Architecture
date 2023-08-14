@@ -9,13 +9,19 @@ using Domain.Models;
 
 namespace Data.Repository
 {
-    public class UserRepository : IUserRepository
+    public 
+        class UserRepository : IUserRepository
     {
         private UniversityDbContext _context;
 
         public UserRepository(UniversityDbContext context)
         {
             _context = context;
+        }
+        
+        public User GetUserByEmail(string email)
+        {
+            return _context.Users.FirstOrDefault(p => p.Email == email);
         }
 
         public void AddUser(User user)
@@ -31,7 +37,11 @@ namespace Data.Repository
         public bool IsExistEmail(string email)
         {
             return _context.Users.Any(u => u.Email == email);
+        }
 
+        public bool IsExistUser(string email, string password)
+        {
+            return _context.Users.Any(p => p.Email == email && p.Password == password);
         }
 
         public void Save()
