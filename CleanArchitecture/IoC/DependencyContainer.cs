@@ -18,12 +18,14 @@ namespace IoC
             #region Application Layer
 
             service.AddScoped<ICourseService, CourseService>();
+            service.AddScoped<IUserService, UserService>();
 
             #endregion
 
             #region Data Layer
 
             service.AddScoped<ICourseRepository, CourseRepository>();
+            service.AddScoped<IUserRepository, UserRepository>();
 
             #endregion
         }
