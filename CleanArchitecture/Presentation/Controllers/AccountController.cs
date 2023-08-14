@@ -1,4 +1,5 @@
 ﻿using Application.Interfaces;
+using Application.Security;
 using Application.ViewModels;
 using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -37,7 +38,7 @@ namespace Web.Mvc.Controllers
                 {
                     Email = register.Email.Trim().ToLower(),
                     UserName = register.UserName,
-                    Password = register.Password.Trim()
+                    Password = SecretHasher.Hash(register.Password.Trim())
                 };
                 _userService.RegisterUser(user);
                 return View("Success",register);
